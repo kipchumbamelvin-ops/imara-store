@@ -9,7 +9,7 @@ header {padding:20px; text-align:center; background:#1a1a1a;}
 h1 {margin:0;}
 .container {padding:20px; display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:15px;}
 .card {background:#1a1a1a; padding:15px; border-radius:12px; border:1px solid #2a2a2a; text-align:center;}
-.icon {font-size:50px; margin:15px 0;}
+.icon {width:100%; height:140px; object-fit:contain; background:#111; border-radius:10px; padding:10px;}
 .title {font-size:14px; margin:10px 0;}
 .price {color:#00c896; font-weight:bold; margin-bottom:10px;}
 button {width:100%; padding:10px; border:none; background:#00c896; color:#000; border-radius:6px; cursor:pointer; font-weight:bold;}
@@ -21,42 +21,42 @@ footer {text-align:center; padding:15px; color:#888;}
 <h1>Imara Store</h1>
 <p>Affordable Tech for Campus Life</p>
 </header><div class="container"><div class="card">
-<div class="icon">🔌</div>
+<img class="icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' stroke='white' fill='none' stroke-width='2'><path d='M10 50h180'/><path d='M30 30v40'/><path d='M170 30v40'/><path d='M50 40h100'/></svg>">
 <div class="title">Type-C Cable</div>
 <div class="price">KES 150</div>
 <button onclick="order('Type-C Cable - 150')">Buy via WhatsApp</button>
 </div><div class="card">
-<div class="icon">🔋</div>
+<img class="icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' stroke='white' fill='none' stroke-width='2'><rect x='70' y='20' width='60' height='60' rx='8'/><path d='M80 30h40'/><path d='M80 45h40'/></svg>">
 <div class="title">iPhone Cable</div>
 <div class="price">KES 220</div>
 <button onclick="order('iPhone Cable - 220')">Buy via WhatsApp</button>
 </div><div class="card">
-<div class="icon">💡</div>
+<img class="icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' stroke='white' fill='none' stroke-width='2'><circle cx='100' cy='50' r='30'/><circle cx='100' cy='50' r='45' opacity='0.4'/></svg>">
 <div class="title">LED Strip 5M</div>
 <div class="price">KES 900</div>
 <button onclick="order('LED Strip 5M - 900')">Buy via WhatsApp</button>
 </div><div class="card">
-<div class="icon">🎧</div>
+<img class="icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' stroke='white' fill='none' stroke-width='2'><circle cx='60' cy='50' r='20'/><circle cx='140' cy='50' r='20'/><path d='M80 50h40'/></svg>">
 <div class="title">Wireless Earbuds</div>
 <div class="price">KES 700</div>
 <button onclick="order('Wireless Earbuds - 700')">Buy via WhatsApp</button>
 </div><div class="card">
-<div class="icon">🔊</div>
+<img class="icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' stroke='white' fill='none' stroke-width='2'><rect x='40' y='30' width='120' height='40' rx='10'/><path d='M60 50h80'/></svg>">
 <div class="title">Bluetooth Speaker</div>
 <div class="price">KES 650</div>
 <button onclick="order('Bluetooth Speaker - 650')">Buy via WhatsApp</button>
 </div><div class="card">
-<div class="icon">🌬️</div>
+<img class="icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' stroke='white' fill='none' stroke-width='2'><circle cx='100' cy='50' r='30'/><path d='M100 20v60'/></svg>">
 <div class="title">Mini USB Fan</div>
 <div class="price">KES 700</div>
 <button onclick="order('Mini USB Fan - 700')">Buy via WhatsApp</button>
 </div><div class="card">
-<div class="icon">✨</div>
+<img class="icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' stroke='white' fill='none' stroke-width='2'><path d='M20 60c20-40 40 40 60 0s40-40 60 0 40 40 60 0'/></svg>">
 <div class="title">Fairy Lights 3M</div>
 <div class="price">KES 650</div>
 <button onclick="order('Fairy Lights 3M - 650')">Buy via WhatsApp</button>
 </div><div class="card">
-<div class="icon">💡</div>
+<img class="icon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' stroke='white' fill='none' stroke-width='2'><circle cx='100' cy='50' r='30'/><circle cx='100' cy='50' r='20'/></svg>">
 <div class="title">Ring Light 10 inch</div>
 <div class="price">KES 1800</div>
 <button onclick="order('Ring Light 10 inch - 1800')">Buy via WhatsApp</button>
