@@ -1,98 +1,77 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Imara Store</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0f0f0f;--card:#171717;--border:#2a2a2a;--accent:#00c896;--muted:#9aa0a6}
-*{box-sizing:border-box}
-body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:#fff}
-header{padding:24px 20px;text-align:center;background:#111;border-bottom:1px solid var(--border)}
-h1{margin:0;color:var(--accent);letter-spacing:1px}
-.sub{color:var(--muted);margin-top:6px}
-.hero{padding:28px 20px;text-align:center;background:linear-gradient(135deg,rgba(0,200,150,.08),rgba(0,168,232,.08));border-bottom:1px solid var(--border)}
-.hero h2{margin:0 0 8px;font-size:22px}
-.container{padding:20px;max-width:1100px;margin:auto}
-.section-title{margin:18px 0 10px;color:var(--accent);font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:.2s}
-.card:hover{transform:translateY(-3px);border-color:var(--accent)}
-.img{height:140px;background:#0b0b0b;display:flex;align-items:center;justify-content:center;color:#555;font-size:12px}
-.content{padding:14px}
-.title{font-weight:600;margin-bottom:6px}
-.price{color:var(--accent);font-weight:700}
-.badge{position:absolute;margin:10px;background:#ff3b3b;color:#fff;font-size:10px;padding:4px 8px;border-radius:6px}
-.card-wrap{position:relative}
-.btn{margin-top:10px;background:var(--accent);border:none;padding:10px;width:100%;border-radius:8px;cursor:pointer;font-weight:600}
-.info{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:16px}
-footer{text-align:center;padding:16px;color:var(--muted)}
+body {font-family: Arial, sans-serif; background:#0f0f0f; color:#fff; margin:0;}
+header {padding:20px; text-align:center; background:#1a1a1a;}
+h1 {margin:0;}
+.container {padding:20px; display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:15px;}
+.card {background:#1a1a1a; padding:15px; border-radius:10px; border:1px solid #2a2a2a;}
+.card img {width:100%; border-radius:8px; height:160px; object-fit:cover;}
+.title {font-size:14px; margin:10px 0;}
+.price {color:#00c896; font-weight:bold; margin-bottom:10px;}
+button {width:100%; padding:10px; border:none; background:#00c896; color:#000; border-radius:6px; cursor:pointer; font-weight:bold;}
+button:hover {opacity:0.9;}
+footer {text-align:center; padding:15px; color:#888;}
 </style>
 </head>
-<body><header>
-<h1>IMARA STORE</h1>
-<p class="sub">Affordable Tech & Lifestyle for Students</p>
-</header><div class="hero">
-<h2>Upgrade Your Campus Life 🔥</h2>
-<p class="sub">Top gadgets under budget. Fast delivery. Pay via M-Pesa.</p>
-</div><div class="container"><h3 class="section-title">🔥 Hot Deals</h3>
-<div class="grid"><div class="card card-wrap">
-<span class="badge">2 LEFT</span>
-<div class="img">Product Image</div>
-<div class="content">
-<div class="title">AirPods (TWS)</div>
-<div class="price">KES 1,300</div>
-<button class="btn" onclick="order('AirPods')">Order via WhatsApp</button>
-</div>
-</div><div class="card card-wrap">
-<span class="badge">HOT</span>
-<div class="img">Product Image</div>
-<div class="content">
-<div class="title">Bluetooth Speaker</div>
-<div class="price">KES 900</div>
-<button class="btn" onclick="order('Bluetooth Speaker')">Order via WhatsApp</button>
-</div>
-</div><div class="card">
-<div class="img">Product Image</div>
-<div class="content">
-<div class="title">LED Strip Lights</div>
-<div class="price">KES 1,500</div>
-<button class="btn" onclick="order('LED Lights')">Order via WhatsApp</button>
-</div>
-</div><div class="card">
-<div class="img">Product Image</div>
-<div class="content">
-<div class="title">Wireless Mouse</div>
-<div class="price">KES 900</div>
-<button class="btn" onclick="order('Mouse')">Order via WhatsApp</button>
-</div>
-</div><div class="card">
-<div class="img">Product Image</div>
-<div class="content">
-<div class="title">Power Bank 5000mAh</div>
-<div class="price">KES 1,000</div>
-<button class="btn" onclick="order('Power Bank')">Order via WhatsApp</button>
-</div>
-</div><div class="card">
-<div class="img">Product Image</div>
-<div class="content">
+<body>
+
+<header>
+<h1>Imara Store</h1>
+<p>Affordable Tech for Campus Life</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585386959984-a415522316f3" alt="Type C Cable">
 <div class="title">Type-C Cable</div>
 <div class="price">KES 150</div>
-<button class="btn" onclick="order('Type-C Cable')">Order via WhatsApp</button>
+<button onclick="order('Type-C Cable - 150')">Buy via WhatsApp</button>
 </div>
-</div></div><div class="info">
-<h4>🚚 Delivery</h4>
-<p>Bomet & nearby areas • KES 50–150</p>
-</div><div class="info">
-<h4>💳 Payment</h4>
-<p>M-Pesa ✔️ • Pay on Delivery (selected areas)</p>
-</div></div><footer>
-<p>WhatsApp: 0736257625</p>
-</footer><script>
-function order(product){
-let phone='254736257625';
-let message=`Hi, I want to order ${product}`;
-window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,'_blank');
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580894908361-967195033215" alt="iPhone Cable">
+<div class="title">iPhone Cable</div>
+<div class="price">KES 220</div>
+<button onclick="order('iPhone Cable - 220')">Buy via WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9" alt="LED Strip">
+<div class="title">LED Strip 5M</div>
+<div class="price">KES 900</div>
+<button onclick="order('LED Strip 5M - 900')">Buy via WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585386959984-a415522316f3" alt="Earbuds">
+<div class="title">Wireless Earbuds</div>
+<div class="price">KES 700</div>
+<button onclick="order('Wireless Earbuds - 700')">Buy via WhatsApp</button>
+</div>
+
+</div>
+
+<footer>
+<p>Pay on Delivery • Test Before Payment</p>
+</footer>
+
+<script>
+function order(product) {
+  let phone = '254736267625';
+  let message = `Hello, I want to order: ${product}`;
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
 }
-</script></body>
+</script>
+
+</body>
 </html>
+
+
+Number inserted.
