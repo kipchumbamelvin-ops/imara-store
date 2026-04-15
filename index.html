@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +8,8 @@ body {font-family: Arial, sans-serif; background:#0f0f0f; color:#fff; margin:0;}
 header {padding:20px; text-align:center; background:#1a1a1a;}
 h1 {margin:0;}
 .container {padding:20px; display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:15px;}
-.card {background:#1a1a1a; padding:15px; border-radius:10px; border:1px solid #2a2a2a;}
-.card img {width:100%; border-radius:8px; height:160px; object-fit:cover;}
+.card {background:#1a1a1a; padding:15px; border-radius:12px; border:1px solid #2a2a2a; text-align:center;}
+.icon {font-size:50px; margin:15px 0;}
 .title {font-size:14px; margin:10px 0;}
 .price {color:#00c896; font-weight:bold; margin-bottom:10px;}
 button {width:100%; padding:10px; border:none; background:#00c896; color:#000; border-radius:6px; cursor:pointer; font-weight:bold;}
@@ -18,59 +17,57 @@ button:hover {opacity:0.9;}
 footer {text-align:center; padding:15px; color:#888;}
 </style>
 </head>
-<body>
-
-<header>
+<body><header>
 <h1>Imara Store</h1>
 <p>Affordable Tech for Campus Life</p>
-</header>
-
-<div class="container">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7" alt="Type C Cable">
+</header><div class="container"><div class="card">
+<div class="icon">🔌</div>
 <div class="title">Type-C Cable</div>
 <div class="price">KES 150</div>
 <button onclick="order('Type-C Cable - 150')">Buy via WhatsApp</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1609081594657-1b39b0b3d0c6" alt="iPhone Cable">
+</div><div class="card">
+<div class="icon">🔋</div>
 <div class="title">iPhone Cable</div>
 <div class="price">KES 220</div>
 <button onclick="order('iPhone Cable - 220')">Buy via WhatsApp</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1603732551681-3b6c9d1b5f9b" alt="LED Strip">
+</div><div class="card">
+<div class="icon">💡</div>
 <div class="title">LED Strip 5M</div>
 <div class="price">KES 900</div>
 <button onclick="order('LED Strip 5M - 900')">Buy via WhatsApp</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1585386959984-5b1a7f0c2b5d" alt="Earbuds">
+</div><div class="card">
+<div class="icon">🎧</div>
 <div class="title">Wireless Earbuds</div>
 <div class="price">KES 700</div>
 <button onclick="order('Wireless Earbuds - 700')">Buy via WhatsApp</button>
-</div>
-
-</div>
-
-<footer>
+</div><div class="card">
+<div class="icon">🔊</div>
+<div class="title">Bluetooth Speaker</div>
+<div class="price">KES 650</div>
+<button onclick="order('Bluetooth Speaker - 650')">Buy via WhatsApp</button>
+</div><div class="card">
+<div class="icon">🌬️</div>
+<div class="title">Mini USB Fan</div>
+<div class="price">KES 700</div>
+<button onclick="order('Mini USB Fan - 700')">Buy via WhatsApp</button>
+</div><div class="card">
+<div class="icon">✨</div>
+<div class="title">Fairy Lights 3M</div>
+<div class="price">KES 650</div>
+<button onclick="order('Fairy Lights 3M - 650')">Buy via WhatsApp</button>
+</div><div class="card">
+<div class="icon">💡</div>
+<div class="title">Ring Light 10 inch</div>
+<div class="price">KES 1800</div>
+<button onclick="order('Ring Light 10 inch - 1800')">Buy via WhatsApp</button>
+</div></div><footer>
 <p>Pay on Delivery • Test Before Payment</p>
-</footer>
-
-<script>
+</footer><script>
 function order(product) {
   let phone = '254736267625';
   let message = `Hello, I want to order: ${product}`;
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 }
-</script>
-
-</body>
+</script></body>
 </html>
-
-
