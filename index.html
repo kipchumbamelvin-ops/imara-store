@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imara Store</title>
+<style>
+body {font-family: Arial, sans-serif; margin:0; background:#0f0f0f; color:#fff;}
+header {padding:20px; text-align:center; background:#111; border-bottom:1px solid #333;}
+h1 {margin:0; color:#00c896;}
+.container {padding:20px;}
+.products {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px;}
+.card {background:#1a1a1a; padding:15px; border-radius:10px; border:1px solid #333; position:relative;}
+.card h3 {margin:0 0 10px;}
+.price {color:#00c896; font-weight:bold;}
+.badge {position:absolute; top:10px; right:10px; background:red; padding:4px 8px; font-size:10px; border-radius:5px;}
+button {background:#00c896; border:none; padding:10px; width:100%; border-radius:6px; cursor:pointer;}
+.section-title {margin-top:30px; margin-bottom:10px; color:#00c896;}
+.info {background:#1a1a1a; padding:15px; border-radius:10px; border:1px solid #333; margin-top:20px;}
+footer {text-align:center; padding:15px; color:#888;}
+</style>
+</head>
+<body><header>
+<h1>Imara Store</h1>
+<p>Affordable Tech & Lifestyle for Students 🔥</p>
+</header><div class="container"><h2 class="section-title">🔥 Hot Deals</h2>
+<div class="products"><div class="card">
+<span class="badge">2 LEFT</span>
+<h3>AirPods (TWS)</h3>
+<p class="price">KES 1,300</p>
+<button onclick="order('AirPods')">Order via WhatsApp</button>
+</div><div class="card">
+<span class="badge">HOT</span>
+<h3>Bluetooth Speaker</h3>
+<p class="price">KES 900</p>
+<button onclick="order('Bluetooth Speaker')">Order via WhatsApp</button>
+</div><div class="card">
+<h3>LED Strip Lights</h3>
+<p class="price">KES 1,500</p>
+<button onclick="order('LED Lights')">Order via WhatsApp</button>
+</div><div class="card">
+<h3>Wireless Mouse</h3>
+<p class="price">KES 900</p>
+<button onclick="order('Mouse')">Order via WhatsApp</button>
+</div><div class="card">
+<h3>Power Bank 5000mAh</h3>
+<p class="price">KES 1,000</p>
+<button onclick="order('Power Bank')">Order via WhatsApp</button>
+</div><div class="card">
+<h3>Type-C Cable</h3>
+<p class="price">KES 150</p>
+<button onclick="order('Type-C Cable')">Order via WhatsApp</button>
+</div></div><div class="info">
+<h3>🚚 Delivery Info</h3>
+<p>Delivery within Bomet & nearby areas. Charges: KES 50 - 150 depending on location.</p>
+</div><div class="info">
+<h3>💳 Payment</h3>
+<p>M-Pesa Accepted ✔️ | Pay on Delivery (selected areas)</p>
+</div></div><footer>
+<p>Contact us on WhatsApp: 0736257625</p>
+</footer><script>
+function order(product){
+let phone = '254736257625';
+let message = `Hi, I want to order ${product}`;
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,'_blank');
+}
+</script></body>
+</html>
