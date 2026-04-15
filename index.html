@@ -3,64 +3,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Imara Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-body {font-family: Arial, sans-serif; margin:0; background:#0f0f0f; color:#fff;}
-header {padding:20px; text-align:center; background:#111; border-bottom:1px solid #333;}
-h1 {margin:0; color:#00c896;}
-.container {padding:20px;}
-.products {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px;}
-.card {background:#1a1a1a; padding:15px; border-radius:10px; border:1px solid #333; position:relative;}
-.card h3 {margin:0 0 10px;}
-.price {color:#00c896; font-weight:bold;}
-.badge {position:absolute; top:10px; right:10px; background:red; padding:4px 8px; font-size:10px; border-radius:5px;}
-button {background:#00c896; border:none; padding:10px; width:100%; border-radius:6px; cursor:pointer;}
-.section-title {margin-top:30px; margin-bottom:10px; color:#00c896;}
-.info {background:#1a1a1a; padding:15px; border-radius:10px; border:1px solid #333; margin-top:20px;}
-footer {text-align:center; padding:15px; color:#888;}
+:root{--bg:#0f0f0f;--card:#171717;--border:#2a2a2a;--accent:#00c896;--muted:#9aa0a6}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:#fff}
+header{padding:24px 20px;text-align:center;background:#111;border-bottom:1px solid var(--border)}
+h1{margin:0;color:var(--accent);letter-spacing:1px}
+.sub{color:var(--muted);margin-top:6px}
+.hero{padding:28px 20px;text-align:center;background:linear-gradient(135deg,rgba(0,200,150,.08),rgba(0,168,232,.08));border-bottom:1px solid var(--border)}
+.hero h2{margin:0 0 8px;font-size:22px}
+.container{padding:20px;max-width:1100px;margin:auto}
+.section-title{margin:18px 0 10px;color:var(--accent);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.img{height:140px;background:#0b0b0b;display:flex;align-items:center;justify-content:center;color:#555;font-size:12px}
+.content{padding:14px}
+.title{font-weight:600;margin-bottom:6px}
+.price{color:var(--accent);font-weight:700}
+.badge{position:absolute;margin:10px;background:#ff3b3b;color:#fff;font-size:10px;padding:4px 8px;border-radius:6px}
+.card-wrap{position:relative}
+.btn{margin-top:10px;background:var(--accent);border:none;padding:10px;width:100%;border-radius:8px;cursor:pointer;font-weight:600}
+.info{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:16px}
+footer{text-align:center;padding:16px;color:var(--muted)}
 </style>
 </head>
 <body><header>
-<h1>Imara Store</h1>
-<p>Affordable Tech & Lifestyle for Students 🔥</p>
-</header><div class="container"><h2 class="section-title">🔥 Hot Deals</h2>
-<div class="products"><div class="card">
+<h1>IMARA STORE</h1>
+<p class="sub">Affordable Tech & Lifestyle for Students</p>
+</header><div class="hero">
+<h2>Upgrade Your Campus Life 🔥</h2>
+<p class="sub">Top gadgets under budget. Fast delivery. Pay via M-Pesa.</p>
+</div><div class="container"><h3 class="section-title">🔥 Hot Deals</h3>
+<div class="grid"><div class="card card-wrap">
 <span class="badge">2 LEFT</span>
-<h3>AirPods (TWS)</h3>
-<p class="price">KES 1,300</p>
-<button onclick="order('AirPods')">Order via WhatsApp</button>
-</div><div class="card">
+<div class="img">Product Image</div>
+<div class="content">
+<div class="title">AirPods (TWS)</div>
+<div class="price">KES 1,300</div>
+<button class="btn" onclick="order('AirPods')">Order via WhatsApp</button>
+</div>
+</div><div class="card card-wrap">
 <span class="badge">HOT</span>
-<h3>Bluetooth Speaker</h3>
-<p class="price">KES 900</p>
-<button onclick="order('Bluetooth Speaker')">Order via WhatsApp</button>
+<div class="img">Product Image</div>
+<div class="content">
+<div class="title">Bluetooth Speaker</div>
+<div class="price">KES 900</div>
+<button class="btn" onclick="order('Bluetooth Speaker')">Order via WhatsApp</button>
+</div>
 </div><div class="card">
-<h3>LED Strip Lights</h3>
-<p class="price">KES 1,500</p>
-<button onclick="order('LED Lights')">Order via WhatsApp</button>
+<div class="img">Product Image</div>
+<div class="content">
+<div class="title">LED Strip Lights</div>
+<div class="price">KES 1,500</div>
+<button class="btn" onclick="order('LED Lights')">Order via WhatsApp</button>
+</div>
 </div><div class="card">
-<h3>Wireless Mouse</h3>
-<p class="price">KES 900</p>
-<button onclick="order('Mouse')">Order via WhatsApp</button>
+<div class="img">Product Image</div>
+<div class="content">
+<div class="title">Wireless Mouse</div>
+<div class="price">KES 900</div>
+<button class="btn" onclick="order('Mouse')">Order via WhatsApp</button>
+</div>
 </div><div class="card">
-<h3>Power Bank 5000mAh</h3>
-<p class="price">KES 1,000</p>
-<button onclick="order('Power Bank')">Order via WhatsApp</button>
+<div class="img">Product Image</div>
+<div class="content">
+<div class="title">Power Bank 5000mAh</div>
+<div class="price">KES 1,000</div>
+<button class="btn" onclick="order('Power Bank')">Order via WhatsApp</button>
+</div>
 </div><div class="card">
-<h3>Type-C Cable</h3>
-<p class="price">KES 150</p>
-<button onclick="order('Type-C Cable')">Order via WhatsApp</button>
+<div class="img">Product Image</div>
+<div class="content">
+<div class="title">Type-C Cable</div>
+<div class="price">KES 150</div>
+<button class="btn" onclick="order('Type-C Cable')">Order via WhatsApp</button>
+</div>
 </div></div><div class="info">
-<h3>🚚 Delivery Info</h3>
-<p>Delivery within Bomet & nearby areas. Charges: KES 50 - 150 depending on location.</p>
+<h4>🚚 Delivery</h4>
+<p>Bomet & nearby areas • KES 50–150</p>
 </div><div class="info">
-<h3>💳 Payment</h3>
-<p>M-Pesa Accepted ✔️ | Pay on Delivery (selected areas)</p>
+<h4>💳 Payment</h4>
+<p>M-Pesa ✔️ • Pay on Delivery (selected areas)</p>
 </div></div><footer>
-<p>Contact us on WhatsApp: 0736257625</p>
+<p>WhatsApp: 0736257625</p>
 </footer><script>
 function order(product){
-let phone = '254736257625';
-let message = `Hi, I want to order ${product}`;
+let phone='254736257625';
+let message=`Hi, I want to order ${product}`;
 window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,'_blank');
 }
 </script></body>
