@@ -2,107 +2,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Imara Store — Quality You Can Trust</title><style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: #fff;
+<title>Imara Store — Catalogue</title><style>
+body { font-family: Arial, sans-serif; margin:0; background:#0b0b0b; color:#fff; }
+.hero { padding:60px 20px; text-align:center; }
+.btn { padding:14px 24px; border-radius:30px; text-decoration:none; display:inline-block; }
+.primary { background:linear-gradient(90deg,#00c896,#00a8e8); color:#000; }
+.catalogue { display:none; padding:20px; background:#fff; color:#000; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+.card { border:1px solid #ddd; padding:16px; border-radius:12px; text-align:center; }
+.price { font-weight:bold; margin-top:10px; }
+@media print {
+  body * { visibility:hidden; }
+  .catalogue, .catalogue * { visibility:visible; }
+  .catalogue { position:absolute; top:0; left:0; width:100%; }
 }
+</style><script>
+function openCatalogue() {
+  document.querySelector('.catalogue').style.display = 'block';
+  setTimeout(() => window.print(), 300);
+}
+</script></head><body><section class="hero">
+  <h1>Imara Store</h1>
+  <p>Product Catalogue</p>
+  <a href="#" onclick="openCatalogue()" class="btn primary">Shop Now →</a>
+</section><section class="catalogue">
+  <h2>Imara Store Catalogue</h2>
+  <div class="grid"><div class="card">
+  <svg width="80" height="80" viewBox="0 0 100 100">
+    <circle cx="30" cy="50" r="15" stroke="#00c896" fill="none"/>
+    <circle cx="70" cy="50" r="15" stroke="#00c896" fill="none"/>
+  </svg>
+  <h3>Wireless Earbuds</h3>
+  <div class="price">KES 800</div>
+</div>
 
-.hero {
-  padding: 80px 20px;
-}
+<div class="card">
+  <svg width="80" height="80" viewBox="0 0 100 100">
+    <rect x="20" y="20" width="60" height="60" stroke="#00a8e8" fill="none"/>
+    <line x1="20" y1="50" x2="80" y2="50" stroke="#00a8e8"/>
+  </svg>
+  <h3>LED Strip Lights</h3>
+  <div class="price">KES 600</div>
+</div>
 
-.hero-badge {
-  color: #00c896;
-  margin-bottom: 20px;
-}
+<div class="card">
+  <svg width="80" height="80" viewBox="0 0 100 100">
+    <circle cx="50" cy="40" r="20" stroke="#ff6b35" fill="none"/>
+    <rect x="45" y="60" width="10" height="20" fill="#ff6b35"/>
+  </svg>
+  <h3>Ring Light</h3>
+  <div class="price">KES 1200</div>
+</div>
 
-h1 {
-  font-size: 42px;
-  line-height: 1.2;
-}
-
-h1 em {
-  color: #00c896;
-  font-style: normal;
-}
-
-.hero-sub {
-  color: #aaa;
-  margin: 20px 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 24px;
-  margin: 10px 10px 0 0;
-  border-radius: 30px;
-  text-decoration: none;
-}
-
-.primary {
-  background: linear-gradient(90deg,#00c896,#00a8e8);
-  color: #000;
-}
-
-.secondary {
-  border: 1px solid #444;
-  color: #fff;
-}
-
-.products {
-  padding: 40px 20px;
-}
-
-.card {
-  background: #151515;
-  padding: 20px;
-  border-radius: 16px;
-  margin-bottom: 20px;
-}
-
-.price {
-  color: #00c896;
-  font-size: 20px;
-}
-
-.order-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  background: #00c896;
-  color: #000;
-  text-decoration: none;
-}
-</style></head><body><section class="hero">
-  <div class="hero-badge">🇰🇪 PROUDLY KENYAN</div>
-  <h1>Quality <br><em>Meets</em><br> Affordable.</h1>
-  <p class="hero-sub">
-    Premium gadgets, beauty essentials & lifestyle products — delivered fast.
-  </p>  <a href="https://wa.me/254736257625?text=Hello%20Imara%20Store,%20I%20want%20to%20order" class="btn primary">
-    Shop Now →
-  </a>  <a href="https://wa.me/254736257625?text=Hello%20Imara%20Store" class="btn secondary">
-    💬 WhatsApp Us
-  </a>
-</section><section class="products">  <div class="card">
-    <h3>Wireless Earbuds</h3>
-    <p class="price">KES 800</p>
-    <a href="https://wa.me/254736257625?text=I%20want%20to%20order%20Wireless%20Earbuds" class="order-btn">Order</a>
-  </div>  <div class="card">
-    <h3>LED Strip Lights</h3>
-    <p class="price">KES 600</p>
-    <a href="https://wa.me/254736257625?text=I%20want%20to%20order%20LED%20Strip%20Lights" class="order-btn">Order</a>
-  </div>  <div class="card">
-    <h3>Ring Light</h3>
-    <p class="price">KES 1200</p>
-    <a href="https://wa.me/254736257625?text=I%20want%20to%20order%20Ring%20Light" class="order-btn">Order</a>
-  </div></section><section class="hero" style="text-align:center;">
-  <h2>Order on WhatsApp</h2>
-  <p>Pay via M-Pesa • Delivery within 24–48 hrs</p>  <a href="https://wa.me/254736257625?text=I%20want%20to%20order" class="btn primary">
-    💬 Chat on WhatsApp
-  </a>
+  </div>
 </section></body>
 </html>
